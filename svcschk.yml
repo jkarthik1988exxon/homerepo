@@ -1,0 +1,9 @@
+---
+- hosts: machine2
+  become: yes
+  tasks:
+    - name: check sshd
+      service:
+        name: sshd.service
+        state: started
+        enabled: yes 
